@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"packages-test/store"
 	// VS Code будет жаловаться, что не может найти пакет <module-name>/store,
 	// если открыть не текущую директорию, как корневую, а уровнем выше (то есть весь репозиторий)
 	// https://stackoverflow.com/questions/58518588/vscode-could-not-import-golang-package
@@ -11,7 +12,7 @@ import (
 	// 10-packages как часть репозитория. Если в VS Code открыта корневая директория репозитория, то
 	// будем видеть во вкладке Problems вот такое:
 	// could not import packages-test/store (cannot find package "packages-test/store" in any of ....
-	"packages-test/store"
+	// "packages-test/store"
 )
 
 func main() {
