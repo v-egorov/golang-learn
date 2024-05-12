@@ -9,8 +9,8 @@ func pointers() {
 	// в second - будет копия значения first
 	second := first
 
-	// fird - это указатель на int, и в fird мы записываем адрес переменной first
-	var fird *int = &first
+	// third - это указатель на int, и в third мы записываем адрес переменной first
+	var third *int = &first
 	// то же самое, но это сокращённая форма объявления переменной
 	fourth := &first
 
@@ -18,15 +18,15 @@ func pointers() {
 	// при этом *fird и *fourth - также будут изменены, потому что указатели
 	// fird и fourth содержат [один и тот же] адрес переменной first
 	first++
-	fmt.Println(first, second, *fird, *fourth)
+	fmt.Println(first, second, *third, *fourth)
 
 	// В go нет арифметики указателей, здесь мы увеличиваем значение,
 	// которое хранится в int, адрес которого в переменной fird
-	*fird++
-	fmt.Println(first, second, *fird, *fourth)
+	*third++
+	fmt.Println(first, second, *third, *fourth)
 
-	// попытка сделать fird++ закончится ошибкой компиляции - non-numeric type *int
-	// fird++
+	// попытка сделать third++ закончится ошибкой компиляции - non-numeric type *int
+	// third++
 }
 
 func main() {
